@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <Navbar></Navbar>
-      <div className='max-w-[1280px] mx-auto'>
+      <div className='max-w-[1280px] lg:mx-auto mx-10'>
         <Banner></Banner>
       </div>
     </>
