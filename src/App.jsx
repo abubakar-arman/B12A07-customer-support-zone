@@ -3,6 +3,7 @@ import './App.css'
 import Banner from './Components/Banner/Banner'
 import Navbar from './Components/Navbar/Navbar'
 import TicketSection from './Components/TicketSection/TicketSection';
+import StatusSection from './Components/StatusSection/StatusSection';
 
 const fetchData = async () => {
   try {
@@ -21,10 +22,13 @@ function App() {
   return (
     <>
     <div className='bg-zinc-200'>
-        <Navbar></Navbar>
-        <div className='max-w-[1280px] lg:mx-auto mx-10'>
-          <Banner></Banner>
-          <TicketSection data={data}></TicketSection>
+        <Navbar />
+        <div className='max-w-[1280px] lg:mx-auto mx-10 px-5'>
+          <Banner />
+          <div className='grid grid-cols-1 lg:grid-cols-4 gap-5'>
+          <TicketSection data={data} />
+          <StatusSection />
+          </div>
         </div>
       </div>
     </>

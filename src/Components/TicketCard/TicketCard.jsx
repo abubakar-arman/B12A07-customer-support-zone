@@ -24,7 +24,7 @@ const TicketCard = ({ ticket }) => {
         createdAt
     } = ticket
     return (
-        <div className="ticket-card card bg-base-100 w-full lg:w-120 shadow-sm">
+        <div className="ticket-card card bg-base-100 w-full shadow-sm">
             <div className="card-body">
                 <div className="top flex justify-between">
                     <h4 className="card-title">{title}</h4>
