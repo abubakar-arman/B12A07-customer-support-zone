@@ -1,0 +1,137 @@
+[
+  {
+    "id": 1,
+    "title": "Login issue",
+    "description": "Customer cannot log in with correct credentials.",
+    "customer": "Alice Johnson",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2025-09-01T09:15:00Z"
+  },
+  {
+    "id": 2,
+    "title": "Payment declined",
+    "description": "Credit card payment fails for valid card.",
+    "customer": "Bob Smith",
+    "priority": "Medium",
+    "status": "In Progress",
+    "createdAt": "2025-09-02T11:20:00Z"
+  },
+  {
+    "id": 3,
+    "title": "Broken link",
+    "description": "Support page returns 404 error.",
+    "customer": "Carla Diaz",
+    "priority": "Low",
+    "status": "Resolved",
+    "createdAt": "2025-09-03T14:05:00Z"
+  },
+  {
+    "id": 4,
+    "title": "Mobile app crash",
+    "description": "App crashes on Android 14 after login.",
+    "customer": "Daniel Lee",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2025-09-04T08:45:00Z"
+  },
+  {
+    "id": 5,
+    "title": "Slow loading",
+    "description": "Website takes more than 10 seconds to load.",
+    "customer": "Ella Green",
+    "priority": "Medium",
+    "status": "In Progress",
+    "createdAt": "2025-09-05T13:30:00Z"
+  },
+  {
+    "id": 6,
+    "title": "Password reset issue",
+    "description": "Reset email not sent to customer.",
+    "customer": "Frank Thomas",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2025-09-06T10:10:00Z"
+  },
+  {
+    "id": 7,
+    "title": "Invoice error",
+    "description": "Incorrect billing amount on invoice.",
+    "customer": "Grace Williams",
+    "priority": "Medium",
+    "status": "Resolved",
+    "createdAt": "2025-09-07T16:25:00Z"
+  },
+  {
+    "id": 8,
+    "title": "Email notifications",
+    "description": "Customer not receiving email updates.",
+    "customer": "Henry Adams",
+    "priority": "Low",
+    "status": "In Progress",
+    "createdAt": "2025-09-08T12:40:00Z"
+  },
+  {
+    "id": 9,
+    "title": "Feature request",
+    "description": "Customer requested dark mode option.",
+    "customer": "Ivy Martinez",
+    "priority": "Low",
+    "status": "Open",
+    "createdAt": "2025-09-09T09:55:00Z"
+  },
+  {
+    "id": 10,
+    "title": "Refund request",
+    "description": "Customer requested refund for duplicate charge.",
+    "customer": "Jack Wilson",
+    "priority": "High",
+    "status": "Resolved",
+    "createdAt": "2025-09-10T15:15:00Z"
+  },
+  {
+    "id": 11,
+    "title": "Account locked",
+    "description": "Too many failed login attempts locked account.",
+    "customer": "Karen Brown",
+    "priority": "High",
+    "status": "In Progress",
+    "createdAt": "2025-09-11T07:50:00Z"
+  },
+  {
+    "id": 12,
+    "title": "UI bug",
+    "description": "Buttons overlap on small screen sizes.",
+    "customer": "Leo Zhang",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "2025-09-12T18:05:00Z"
+  },
+  {
+    "id": 13,
+    "title": "Shipping delay",
+    "description": "Order shipment delayed beyond estimated time.",
+    "customer": "Mia Chen",
+    "priority": "Medium",
+    "status": "Resolved",
+    "createdAt": "2025-09-13T11:35:00Z"
+  },
+  {
+    "id": 14,
+    "title": "Duplicate order",
+    "description": "Customer accidentally placed two identical orders.",
+    "customer": "Nathan Scott",
+    "priority": "Low",
+    "status": "Open",
+    "createdAt": "2025-09-14T14:55:00Z"
+  },
+  {
+    "id": 15,
+    "title": "Subscription cancellation",
+    "description": "Customer unable to cancel subscription online.",
+    "customer": "Olivia Perez",
+    "priority": "High",
+    "status": "In Progress",
+    "createdAt": "2025-09-15T09:25:00Z"
+  }
+]
