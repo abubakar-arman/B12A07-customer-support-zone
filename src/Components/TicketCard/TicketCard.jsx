@@ -40,6 +40,19 @@ const TicketCard = ({ ticket, handleTicketClick }) => {
             statusBg = ' bg-blue-300 text-blue-800'
             break;
     }
+
+    let colorPriority = ''
+    switch(priority){
+        case 'Low':
+            colorPriority = ' text-green-700'
+            break;
+        case 'Medium':
+            colorPriority = ' text-yellow-700'
+            break;
+        case 'High':
+            colorPriority = ' text-red-700'
+            break;
+    }
    
     return (
         <div className="ticket-card card bg-base-100 w-full shadow-sm" onClick={() => handleTicketClick(ticket)}>
@@ -52,7 +65,7 @@ const TicketCard = ({ ticket, handleTicketClick }) => {
                 <div className="bottom mt-5 font-semibold flex justify-between text-zinc-600">
                     <div className='flex gap-5'>
                         <p className="">#{id}</p>
-                        <p className="text-red-700">{priority}</p>
+                        <p className={colorPriority}>{priority}</p>
                     </div>
                     <div className='flex gap-5'>
                         <p className="">{customer}</p>
