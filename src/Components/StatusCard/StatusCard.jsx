@@ -1,8 +1,7 @@
 import React from 'react';
 
-const StatusCard = ({task, handleTaskComplete}) => {
+const StatusCard = ({task, handleTaskComplete, isResolved}) => {
     const {title} = task
-    const isResolved = false
     return (
         <div className="card bg-base-100 shadow-sm mt-3 rounded-sm">
             <div className="card-body">

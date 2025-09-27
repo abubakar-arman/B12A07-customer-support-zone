@@ -36,6 +36,18 @@ function App() {
   }
 
   const handleTaskComplete = (task) => {
+    if(task.status === 'Resolved'){
+      return
+    }
+    task.status='Resolved'
+    setTasksResolved([...tasksResolved, task])
+
+    const newTasksInProgress = tasksInProgress.filter(t => t.id != task.id)
+    setTasksInProgress(newTasksInProgress)
+
+    const newTasksDB = tasksDB.filter(t => t.id != task.id)
+    setTasksDB(newTasksDB)
+    toast.success(task.status)
   }
 
   return (
@@ -43,10 +55,10 @@ function App() {
       <div className='bg-zinc-200'>
         <Navbar />
         <div className='max-w-[1280px] lg:mx-auto mx-10 px-5'>
-          <Banner tasksInProgress={tasksInProgress} />
+          <Banner tasksInProgress={tasksInProgress} tasksResolved={tasksResolved} />
           <div id='main-section' className='grid grid-cols-1 lg:grid-cols-4 gap-5'>
             <TicketSection tasksDB={tasksDB} handleTicketClick={handleTicketClick} />
-            <StatusSection tasksInProgress={tasksInProgress} handleTaskComplete={handleTaskComplete} />
+            <StatusSection tasksInProgress={tasksInProgress} tasksResolved={tasksResolved} handleTaskComplete={handleTaskComplete} />
           </div>
         </div>
         <Footer />
