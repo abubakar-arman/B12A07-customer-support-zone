@@ -13,7 +13,7 @@ import { faCalendar } from '@fortawesome/free-regular-svg-icons'
 //   "status": "Open",
 //   "createdAt": "2025-09-01T09:15:00Z"
 // },
-const TicketCard = ({ ticket }) => {
+const TicketCard = ({ ticket, handleTicketClick }) => {
     const {
         id,
         title,
@@ -23,12 +23,30 @@ const TicketCard = ({ ticket }) => {
         status,
         createdAt
     } = ticket
+
+    let statusCircleBg = ''
+    let statusBg = ''
+    switch(status) {
+        case 'Open':
+            statusCircleBg = ' bg-green-700';
+            statusBg = ' bg-green-300 text-green-800'
+            break;
+        case 'In Progress':
+            statusCircleBg = ' bg-yellow-700';
+            statusBg = ' bg-yellow-300 text-yellow-800'
+            break;
+        case 'Resolved':
+            statusCircleBg = ' bg-blue-700';
+            statusBg = ' bg-blue-300 text-blue-800'
+            break;
+    }
+   
     return (
-        <div className="ticket-card card bg-base-100 w-full shadow-sm">
+        <div className="ticket-card card bg-base-100 w-full shadow-sm" onClick={() => handleTicketClick(ticket)}>
             <div className="card-body">
                 <div className="top flex justify-between">
                     <h4 className="card-title">{title}</h4>
-                    <button className="btn bg-green-300 rounded-full h-7 text-green-800"><span className='w-3 h-3 bg-green-700 rounded-full'></span>{status}</button>
+                    <button className={"btn rounded-full h-7"+ statusBg}><span className={'w-3 h-3 rounded-full'+statusCircleBg}></span>{status}</button>
                 </div>
                 <p className="middle text-gray-600">{description}</p>
                 <div className="bottom mt-5 font-semibold flex justify-between text-zinc-600">

@@ -11,14 +11,14 @@ const Navbar = () => {
                     <ul
                         tabIndex={0}
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                        {menuItems.map(name => <li><a>{name}</a></li>)}
+                        {menuItems.map((name, idx) => <li key={idx}><a>{name}</a></li>)}
                     </ul>
                 </div>
                 <a className="btn btn-ghost text-xl">CS - Ticket System</a>
             </div>
             <div className="navbar-end hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
-                    {menuItems.map(name => <li><a>{name}</a></li>)}
+                    {menuItems.map((name, idx) => <li key={idx}><a>{name}</a></li>)}
                 </ul>
             </div>
             <button className="btn bg-gradient-to-br from-[#632EE3] to-[#9F62F2] text-white">+ New Ticket</button>

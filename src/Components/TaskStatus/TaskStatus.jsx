@@ -2,14 +2,14 @@ import React from 'react';
 import StatusCard from '../StatusCard/StatusCard';
 
 
-const TaskStatus = () => {
+const TaskStatus = ({tasksInProgress, handleTaskComplete}) => {
     return (
         <div id="task-status" className="">
             <h3 className="text-xl font-bold text-gray-800">Task Status</h3>
             <div className="container mt-5">
-                <StatusCard title='Payment Failed - Card Declined'></StatusCard>
-                <StatusCard title='Payment Failed - Card Declined'></StatusCard>
-                <StatusCard title='Payment Failed - Card Declined'></StatusCard>
+                {
+                    tasksInProgress.map((t, idx) => <StatusCard key={idx} task={t} handleTaskComplete={handleTaskComplete} />)
+                }
             </div>
         </div>
     );
